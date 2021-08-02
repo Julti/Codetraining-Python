@@ -1,0 +1,17 @@
+import sys
+import queue
+from math import sqrt
+input = lambda: sys.stdin.readline()
+
+def Main():
+	t = int(input())
+	for i in range(0,t):
+		a,b,c,n = map(int,input().split(' '))
+		m=max(a,b,c)
+		dif = (m-a)+(m-b)+(m-c)
+		if((n-dif)%3==0 and n>=dif):
+			print('YES')
+		else:
+			print('NO')
+if __name__ == '__main__':
+	Main()
